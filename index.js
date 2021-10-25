@@ -11,6 +11,7 @@ app.get('/',function(request, response) {
     console.log(clientIp);
     console.log(geo);
     response.send(clientIp)
+    response.send(geo)
 
 });
 
