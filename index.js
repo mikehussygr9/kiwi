@@ -10,8 +10,8 @@ app.get('/',function(request, response) {
     var ipg="14.140.206.158"
     var geo = geoip.lookup(clientIp.toString());
     console.log(clientIp);
-    console.log(geo);
-    response.send(geo)
+    console.log(geo.country);
+    response.send(geo.country)
 
 });
 
