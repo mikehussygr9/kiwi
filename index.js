@@ -11,7 +11,7 @@ app.get('/',function(request, response) {
     var geo = geoip.lookup(clientIp.toString());
     console.log(clientIp);
     console.log(geo);
-    response.send(clientIp)
+    response.send(geo)
 
 });
 
