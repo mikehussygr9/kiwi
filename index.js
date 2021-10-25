@@ -9,9 +9,15 @@ app.get('/',function(request, response) {
     var clientIp = requestIp.getClientIp(request);
     var ipg="14.140.206.158"
     var geo = geoip.lookup(clientIp.toString());
-    console.log(clientIp);
-    console.log(geo.country);
-    response.send(geo.country)
+    if (geo.country==="IN")
+    {
+        response.redirect('https://www.facebook.com/goo');
+    }
+    else
+    {
+        response.redirect("https://www.google.com/");
+    }
+
 
 });
 
