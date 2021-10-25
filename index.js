@@ -7,11 +7,11 @@ var geoip = require('geoip-country');
 app.get('/',function(request, response) {
 
     var clientIp = requestIp.getClientIp(request);
-    var geo = geoip.lookup(clientIp);
+    var ipg="14.140.206.158"
+    var geo = geoip.lookup(clientIp.toString());
     console.log(clientIp);
     console.log(geo);
     response.send(clientIp)
-    response.send(geo)
 
 });
 
